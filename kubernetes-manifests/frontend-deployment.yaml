@@ -15,7 +15,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: gangadhar0416/frontend:2024-01-29.19.07.18.
+          image: gangadhar0416/frontend:latest
           ports:
             - containerPort: 80
           imagePullPolicy: Always
+          env:
+            - name: Tag for triggering
+              value: TAG
