@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-deployment
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: frontend
@@ -15,11 +15,18 @@ spec:
     spec:
       containers:
         - name: frontend
+<<<<<<< HEAD
           image: gangadhar0416/frontend:9
           ports:
             - containerPort: 80
           imagePullPolicy: Always
           #hpa-demo
+=======
+          image: gangadhar0416/frontend:12
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+>>>>>>> cbabc8f0fe7c71c8f23a9fe67b9dfcfcf98f97e5
           resources:
             requests:
               memory: "128Mi"
@@ -27,6 +34,7 @@ spec:
             limits:
               memory: "500Mi"
               cpu: "200m" 
+<<<<<<< HEAD
 
           #rolling-updates with zero down time
           readinessProbe:
@@ -44,3 +52,5 @@ spec:
       maxUnavailable: 50%
              
         
+=======
+>>>>>>> cbabc8f0fe7c71c8f23a9fe67b9dfcfcf98f97e5
