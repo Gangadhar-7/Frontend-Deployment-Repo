@@ -28,8 +28,6 @@ spec:
               cpu: "200m" 
 
 
-            
-
           #rolling-updates with zero down time
     #       readinessProbe:
     #         httpGet:
