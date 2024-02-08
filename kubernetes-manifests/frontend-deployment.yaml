@@ -15,18 +15,10 @@ spec:
     spec:
       containers:
         - name: frontend
-<<<<<<< HEAD
-          image: gangadhar0416/frontend:9
-          ports:
-            - containerPort: 80
-          imagePullPolicy: Always
-          #hpa-demo
-=======
           image: gangadhar0416/frontend:12
           ports:
             - containerPort: 80
           imagePullPolicy: Always
->>>>>>> cbabc8f0fe7c71c8f23a9fe67b9dfcfcf98f97e5
           resources:
             requests:
               memory: "128Mi"
@@ -34,23 +26,22 @@ spec:
             limits:
               memory: "500Mi"
               cpu: "200m" 
-<<<<<<< HEAD
+
+
+            
 
           #rolling-updates with zero down time
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 80
-              initialDelaySeconds: 5
-              periodSeconds: 5
-              successThreshold: 1
-    #update by 50% - if pass the tests of probes.
-    strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 50%
+    #       readinessProbe:
+    #         httpGet:
+    #           path: /
+    #           port: 80
+    #           initialDelaySeconds: 5
+    #           periodSeconds: 5
+    #           successThreshold: 1
+    # #update by 50% - if pass the tests of probes.
+    # strategy:
+    # type: RollingUpdate
+    # rollingUpdate:
+    #   maxSurge: 50%
+    #   maxUnavailable: 50%
              
-        
-=======
->>>>>>> cbabc8f0fe7c71c8f23a9fe67b9dfcfcf98f97e5
